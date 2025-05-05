@@ -7,32 +7,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Calculator App</title>
 </head>
 <body>
     <div class="calculator">
-        <div class="screen"><input readonly></div>
+        <input class ="screen" id="calcScreen" readonly>
         <div class="container">
-            <div><i class="fa-solid fa-delete-left"></i></div>
-            <div><i class="fa-solid fa-plus-minus"></i></div>
-            <div><i class="fa-solid fa-percent"></i></div>
-            <div><i class="fa-solid fa-divide"></i></div>
-            <div><i class="fa-solid fa-7"></i></div>
-            <div><i class="fa-solid fa-8"></i></div>
-            <div><i class="fa-solid fa-9"></i></div>
-            <div><i class="fa-solid fa-xmark"></i></div>
-            <div><i class="fa-solid fa-4"></i></div>
-            <div><i class="fa-solid fa-5"></i></div>
-            <div><i class="fa-solid fa-6"></i></div>
-            <div><i class="fa-solid fa-minus"></i></div>
-            <div><i class="fa-solid fa-1"></i></div>
-            <div><i class="fa-solid fa-2"></i></div>
-            <div><i class="fa-solid fa-3"></i></div>
-            <div><i class="fa-solid fa-plus"></i></div>
-            <div><i class="fa-solid fa-calculator"></i></div>
-            <div><i class="fa-solid fa-0"></i></div>
-            <div>.</div>
-            <div><i class="fa-solid fa-equals"></i></div>
+            <button class="grey" onclick="clearDisplay()">C</button>
+            <button class="grey" onclick="negPos()"><i class="fa-solid fa-plus-minus"></i></button>
+            <button class="grey" onclick="appendToDisplay('%')"><i class="fa-solid fa-percent"></i></button>
+            <button class="orange" onclick="appendToDisplay('/')"><i class="fa-solid fa-divide"></i></button>
+            <button class="black" onclick="appendToDisplay('7')"><i class="fa-solid fa-7"></i></button>
+            <button class="black" onclick="appendToDisplay('8')"><i class="fa-solid fa-8"></i></button>
+            <button class="black" onclick="appendToDisplay('9')"><i class="fa-solid fa-9"></i></button>
+            <button class="orange" onclick="appendToDisplay('*')"><i class="fa-solid fa-xmark"></i></button>
+            <button class="black" onclick="appendToDisplay('4')"><i class="fa-solid fa-4"></i></button>
+            <button class="black" onclick="appendToDisplay('5')"><i class="fa-solid fa-5"></i></button>
+            <button class="black" onclick="appendToDisplay('6')"><i class="fa-solid fa-6"></i></button>
+            <button class="orange" onclick="appendToDisplay('-')"><i class="fa-solid fa-minus"></i></button>
+            <button class="black" onclick="appendToDisplay('1')"><i class="fa-solid fa-1"></i></button>
+            <button class="black" onclick="appendToDisplay('2')"><i class="fa-solid fa-2"></i></button>
+            <button class="black" onclick="appendToDisplay('3')"><i class="fa-solid fa-3"></i></button>
+            <button class="orange" onclick="appendToDisplay('+')"><i class="fa-solid fa-plus"></i></button>
+            <button class="black"><i class="fa-solid fa-calculator"></i></button>
+            <button class="black" onclick="appendToDisplay('0')"><i class="fa-solid fa-0"></i></button>
+            <button class="black" onclick="appendToDisplay('.')">.</button>
+            <button class="orange" onclick="calculate()"><i class="fa-solid fa-equals"></i></button>
         </div>
     </div>
 </body>
